@@ -6,6 +6,7 @@ const database = require('./config/database');
 database.connect();
 const clientRouter = require("./routes/client/index.route");
 
+app.use(express.json());
 
 app.use('/', clientRouter);
 
